@@ -1,8 +1,21 @@
+.full-window{
+    display: flex;
+    margin-top: 20px;
+    
+}
+
+.menu-panel{
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+}
 
 .matrix-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 100%;
+    
 }
 
 .row-container{
@@ -15,5 +28,18 @@
     border-width: 15px;
     border-style: ridge;
     flex-grow: 1;
-    max-width: 40vw;    
+    max-width: 40vw;  
+   
+    overflow-y: scroll;
+
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+.inputs input{    
+ width: 90%;
 }
