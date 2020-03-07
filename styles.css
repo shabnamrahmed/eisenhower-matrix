@@ -1,30 +1,19 @@
-.matrix-box{
-    /* display: grid;
-   
-    grid-template-columns: 1fr 2fr 2fr 1fr;
-    grid-template-areas: 
-    ". impnoturg impandurg ."
-    ". notimpurg notimpnoturg .";
-    grid-gap: 5px; */
+
+.matrix-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-/* }
-#ImpNotUrg {
-    grid-area: impnoturg;
-    max-width: 20px;
-}
-
-#ImpAndUrg{
-    grid-area: impandurg;
-
-
-} */
-
 
 .row-container{
     display: flex;
+    height: 40vh;
 }
+
 .matrix-box {
     border-color: aqua;
     border-width: 15px;
     border-style: ridge;
+    flex-grow: 1;
+    max-width: 40vw;    
 }
