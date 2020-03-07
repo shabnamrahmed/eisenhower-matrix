@@ -1,5 +1,30 @@
-.hello {
+.matrix-box{
+    /* display: grid;
+   
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-areas: 
+    ". impnoturg impandurg ."
+    ". notimpurg notimpnoturg .";
+    grid-gap: 5px; */
+}
+/* }
+#ImpNotUrg {
+    grid-area: impnoturg;
+    max-width: 20px;
+}
+
+#ImpAndUrg{
+    grid-area: impandurg;
+
+
+} */
+
+
+.row-container{
+    display: flex;
+}
+.matrix-box {
     border-color: aqua;
-    border-width: 20px;
+    border-width: 15px;
     border-style: ridge;
 }
