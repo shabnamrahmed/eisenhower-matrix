@@ -1,3 +1,14 @@
+.full-window{
+    display: flex;
+    margin-top: 20px;
+    
+}
+
+.menu-panel{
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+}
 
 .matrix-container{
     display: flex;
