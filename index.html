@@ -11,9 +11,9 @@
 <body>
     <div class="full-window">
         <div class="menu-panel">
-            <a href="#">
+            <button id="save-all">
                 Save
-            </a>
+            </button>
             <a href="#">
                 Load
             </a>
@@ -30,25 +30,34 @@
         <div class="matrix-container">
             <div class="row-container">
                 <div class="matrix-box">
-                    <h2 id="ImpNotUrg">
+                    <h2>
                         Important, Not Urgent</h2>
-                    <div class="inputs">
+                    <div id="A" class="inputs">
+                        <input> </input>
+                        <input> </input>
+                        <input> </input>
+                        <input> </input>
+                        <input> </input>                        
+                    </div>
 
+                </div>
+
+                <div class="matrix-box">
+                    <h2>Important & Urgent</h2>
+                    <div id="B" class="inputs">
                         <input> </input>
                         <input> </input>
                         <input> </input>
                         <input> </input>
                         <input> </input>
-                        <input> </input>
-                        <input> </input>
-                        <input> </input>
-                        <input> </input>
-                        <input> </input>
-                        <input> </input>
-                        <input> </input>
-                        <input> </input>
-                        <input> </input>
-                        <input> </input>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row-container">
+                <div class="matrix-box">
+                    <h2>Not Important, Not Urgent</h2>
+                    <div id="C" class="inputs">
                         <input> </input>
                         <input> </input>
                         <input> </input>
@@ -59,19 +68,15 @@
                 </div>
 
                 <div class="matrix-box">
-                    <h2 id="ImpAndUrg">Important & Urgent</h2>
-
-                </div>
-            </div>
-            <div class="row-container">
-                <div class="matrix-box">
-                    <h2>Not Important, Not Urgent</h2>
-
-                </div>
-
-                <div class="matrix-box">
 
                     <h2>Not Important, Urgent</h2>
+                    <div id="D" class="inputs">
+                        <input> </input>
+                        <input> </input>
+                        <input> </input>
+                        <input> </input>
+                        <input> </input>
+                    </div>
                 </div>
             </div>
         </div>
