@@ -1,45 +1,79 @@
-.full-window{
-    display: flex;
-    margin-top: 20px;
-    
+html {
+  background-color: maroon;
+  height: 100vh;
 }
 
-.menu-panel{
-    display: flex;
-    flex-direction: column;
-    margin-right: 10px;
+body {
+  background-color: maroon;
 }
 
-.matrix-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    
+.full-window {
+  display: flex;
+  margin-top: 20px;
 }
 
-.row-container{
-    display: flex;
-    height: 40vh;
+.menu-panel {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+  margin-top: 40px;
+}
+
+
+.matrix-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.row-container {
+  display: flex;
+  height: 40vh;
 }
 
 .matrix-box {
-    border-color: aqua;
-    border-width: 15px;
-    border-style: ridge;
-    flex-grow: 1;
-    max-width: 40vw;  
+  border-color: goldenrod;
+  border-width: 15px;
+  border-style: ridge;
+  flex-grow: 1;
+  max-width: 45vw;
+  overflow-y: auto;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+  color: red;
+}
+
+.active {
+  color: green;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inputs input {
+  width: 90%;
+}
+
+input[type=text]:focus {
+    border: 5px solid #555;
+  }
+
+  h2{
+    font-size: 175%;
+    font-weight: 500;
+    text-align: center;
+    margin: 15px;
+  }
+
+  #title{
+      max-width: 50%;
+      position: relative;
+    left: 24%;
+  }
    
-    overflow-y: scroll;
-
-}
-
-.inputs{
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-}
-
-.inputs input{    
- width: 90%;
-}
