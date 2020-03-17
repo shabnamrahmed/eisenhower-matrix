@@ -19,6 +19,9 @@ body {
   margin-top: 40px;
 }
 
+button{
+    margin: 5px;
+}
 
 .matrix-container {
   display: flex;
@@ -65,10 +68,13 @@ input[type=text]:focus {
   }
 
   h2{
-    font-size: 175%;
-    font-weight: 500;
+    font-size: 300%;
+    font-weight: bold;
     text-align: center;
     margin: 15px;
+    margin-left: 15%;
+    margin-right: 15%;
+    background-color: black;
   }
 
   #title{
