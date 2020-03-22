@@ -28,6 +28,7 @@ button {
   flex-direction: column;
   justify-content: center;
   width: 100%;
+  margin-right: 25px;
 }
 
 .row-container {
@@ -78,7 +79,7 @@ input {
 }
 
 h2 {
-  font-size: 300%;
+  font-size: 3.5vw;
   font-weight: bold;
   text-align: center;
   margin: 15px;
@@ -127,13 +128,15 @@ h2 {
 
 /* graph lines */
 .horizontal-line-container {
+  margin-top: 10px;
   padding-left: 9.7em;
+  padding-right: 25px;
   display: flex;
   align-items: center;
 }
 
 .vertical-line-container {
-  margin-top: 50px;
+  justify-content: flex-end;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -142,23 +145,26 @@ h2 {
 }
 
 .vertical-line {
-  height: 40em;
-  border: solid red;
+  height: 36.5em;
+  width: 10px;
+  background: linear-gradient(#bbe1fa, #0f4c75);
   border-width: 0px 5px;
   border-radius: 28px;
+  margin-bottom: -15px;
 }
 
 .horizontal-line {
   width: 100%;
-  border: solid red;
   border-width: 10px 0px 0px 0px;
   border-radius: 20px;
+  background: linear-gradient(to right, #0f4c75, #bbe1fa);
+  height: 10px;
 }
 
 .right-arrow {
   display: flex;
   margin-left: -30px;
-  border: solid red;
+  border: solid #bbe1fa;
   border-width: 0 10px 10px 0;
   border-radius: 5px;
   padding: 10px;
@@ -170,7 +176,7 @@ h2 {
   display: flex;
   margin-left: -10px;
   margin-bottom: -30px;
-  border: solid red;
+  border: solid #bbe1fa;
   border-width: 0 10px 10px 0;
   border-radius: 5px;
   padding: 10px;
