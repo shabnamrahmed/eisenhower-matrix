@@ -2,6 +2,12 @@ function getUserTitleElement() {
   return document.querySelector("#title").value;
 }
 
+function updateSavedAtTime() {
+  document.querySelector(
+    "#saved-at-time"
+  ).innerText = new Date().toLocaleString();
+}
+
 //when title is being typed, it is stored on key release
 document.querySelector("#title").onkeyup = event => {
   window.localStorage.setItem("title", event.target.value);
@@ -10,6 +16,8 @@ document.querySelector("#title").onkeyup = event => {
 //gets last saved title and populates title box
 const title = window.localStorage.getItem("title");
 document.querySelector("#title").value = title;
+
+updateSavedAtTime();
 
 //Creates array of keys to be used as labels for each box
 const keys = ["A", "B", "C", "D"];
@@ -24,6 +32,7 @@ document.querySelector("#save-all").onclick = () => {
     const matrixAString = JSON.stringify(savedMatrixAValues); //need to stringyfy in order to save in local storage
     window.localStorage.setItem(key, matrixAString);
   });
+  updateSavedAtTime();
 };
 
 //Converts text from each box to string separated by | and prints each on a new line
@@ -61,7 +70,7 @@ keys.forEach(key => {
   }
 });
 
-//When download button is clicked, data is downloaded named after title 
+//When download button is clicked, data is downloaded named after title
 //from user input and text from getTextToSaveToFile function
 document.querySelector("#download-data").onclick = downloadData;
 function downloadData() {

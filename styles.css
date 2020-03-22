@@ -107,6 +107,15 @@ h2 {
   background-color: #f2e4cb;
 }
 
+#last-saved-text-container {
+  color: #bbe1faa6;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 15px;
+  max-width: 120px;
+}
+
 #download-data {
   background-color: #eac78d;
   /* background-color: #f6bd5f; */
