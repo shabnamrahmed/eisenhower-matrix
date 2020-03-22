@@ -1,3 +1,17 @@
+/**
+ * Array containing keys for each box:
+ *        _______
+ *       | A | B |
+ *       |___|___|
+ *       | C | D |
+ *       |___|___|
+ */
+const keys = ["A", "B", "C", "D"];
+
+// ////////////////////////////////////////////////////////////
+// ///////////////HELPER FUNCTIONS ////////////////////////////
+// ////////////////////////////////////////////////////////////
+
 function getUserTitleElement() {
   return document.querySelector("#title").value;
 }
@@ -8,34 +22,8 @@ function updateSavedAtTime() {
   ).innerText = new Date().toLocaleString();
 }
 
-//when title is being typed, it is stored on key release
-document.querySelector("#title").onkeyup = event => {
-  window.localStorage.setItem("title", event.target.value);
-};
-
-//gets last saved title and populates title box
-const title = window.localStorage.getItem("title");
-document.querySelector("#title").value = title;
-
-updateSavedAtTime();
-
-//Creates array of keys to be used as labels for each box
-const keys = ["A", "B", "C", "D"];
-
-//When save button is clicked each input in each box is saved
-document.querySelector("#save-all").onclick = () => {
-  keys.forEach(key => {
-    let savedMatrixAValues = [];
-    document
-      .querySelectorAll(`#${key} input`)
-      .forEach(item => savedMatrixAValues.push(item.value));
-    const matrixAString = JSON.stringify(savedMatrixAValues); //need to stringyfy in order to save in local storage
-    window.localStorage.setItem(key, matrixAString);
-  });
-  updateSavedAtTime();
-};
-
-//Converts text from each box to string separated by | and prints each on a new line
+// Converts text from each box to a string separated by a "|" symbol"
+// and prints each boxes contents on a single line
 function getTextToSaveToFile() {
   return keys
     .map(key => {
@@ -51,6 +39,16 @@ function getTextToSaveToFile() {
     .join("\n");
 }
 
+// ////////////////////////////////////////////////////////////
+// ///////////////ON PAGE LOAD ////////////////////////////////
+// ////////////////////////////////////////////////////////////
+
+// LOAD TITLE
+//gets last saved title and populates title box
+const title = window.localStorage.getItem("title");
+document.querySelector("#title").value = title;
+
+// LOAD ALL INPUTS
 //gets item from storage, parses it in order to convert string object to array.
 //populates inputs with previous saved info
 keys.forEach(key => {
@@ -70,10 +68,35 @@ keys.forEach(key => {
   }
 });
 
-//When download button is clicked, data is downloaded named after title
-//from user input and text from getTextToSaveToFile function
-document.querySelector("#download-data").onclick = downloadData;
-function downloadData() {
+// update the saved at time when the page loads
+updateSavedAtTime();
+
+// ////////////////////////////////////////////////////////////
+// ///////////////EVENT HANDLERS///////////////////////////////
+// ////////////////////////////////////////////////////////////
+
+//when title is being typed, it is stored on key release
+document.querySelector("#title").onkeyup = event => {
+  window.localStorage.setItem("title", event.target.value);
+};
+
+//When save button is clicked each input in each box is saved
+document.querySelector("#save-all").onclick = () => {
+  keys.forEach(key => {
+    let savedMatrixAValues = [];
+    document
+      .querySelectorAll(`#${key} input`)
+      .forEach(item => savedMatrixAValues.push(item.value));
+    const matrixAString = JSON.stringify(savedMatrixAValues); //need to stringyfy in order to save in local storage
+    window.localStorage.setItem(key, matrixAString);
+  });
+  updateSavedAtTime();
+};
+
+// When download button is clicked, data is downloaded as a .txt file.
+// File is named after current title in the `#title` box.
+// Text for each box is obtained using helper function `getTextToSaveToFile()`
+document.querySelector("#download-data").onclick = () => {
   var element = document.createElement("a");
   element.setAttribute(
     "href",
@@ -87,4 +110,4 @@ function downloadData() {
   element.click();
 
   document.body.removeChild(element);
-}
+};
