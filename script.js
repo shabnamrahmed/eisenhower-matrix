@@ -96,7 +96,7 @@ document.querySelector("#save-all").onclick = () => {
 
 // When download button is clicked, data is downloaded as a .txt file.
 // File is named after current title in the `#title` box.
-// Text for each box is obtained using helper function `getTextToSaveToFile()`
+// File content is obtained using helper function `getTextToSaveToFile()`
 document.querySelector("#download-data").onclick = () => {
   var element = document.createElement("a");
   element.setAttribute(
@@ -112,3 +112,20 @@ document.querySelector("#download-data").onclick = () => {
 
   document.body.removeChild(element);
 };
+
+// On "Enter" key, focus to the next input
+const allInputs = document.querySelectorAll("input");
+Array.from(allInputs).forEach((element, index) => {
+  const isLastElement = index === allInputs.length - 1;
+  element.onkeypress = event => {
+    if (event.key === "Enter") {
+      if (isLastElement) {
+        // last element should go back to the first input that isn't the title
+        allInputs[1].focus(); // element `0` is the #title input
+      } else {
+        // otherwise focus the next input
+        allInputs[index + 1].focus();
+      }
+    }
+  };
+});
