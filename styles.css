@@ -118,7 +118,7 @@ h2 {
 
 /* graph lines */
 .horizontal-line-container {
-  padding-left: 6.75em;
+  padding-left: 9.7em;
   display: flex;
   align-items: center;
 }
@@ -129,6 +129,7 @@ h2 {
   flex-direction: column;
   align-items: flex-start;
   margin-bottom: -15px;
+  padding: 0px 10px;
 }
 
 .vertical-line {
