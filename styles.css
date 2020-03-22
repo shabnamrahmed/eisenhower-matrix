@@ -94,16 +94,16 @@ h2 {
   left: 24%;
   text-align: center;
   font-size: x-large;
-    font-weight: bold;
-    margin-bottom: 10px;
-    border-width: 1px 0px 1px 0px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  border-width: 1px 0px 1px 0px;
 }
 
 #save-all {
   background-color: #eac78d;
 }
 
-#save-all:hover{
+#save-all:hover {
   background-color: #f2e4cb;
 }
 
@@ -112,7 +112,58 @@ h2 {
   /* background-color: #f6bd5f; */
 }
 
-#download-data:hover{
+#download-data:hover {
   background-color: #f2e4cb;
+}
 
+/* graph lines */
+.horizontal-line-container {
+  padding-left: 6.75em;
+  display: flex;
+  align-items: center;
+}
+
+.vertical-line-container {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: -15px;
+}
+
+.vertical-line {
+  height: 40em;
+  border: solid red;
+  border-width: 0px 5px;
+  border-radius: 28px;
+}
+
+.horizontal-line {
+  width: 100%;
+  border: solid red;
+  border-width: 10px 0px 0px 0px;
+  border-radius: 20px;
+}
+
+.right-arrow {
+  display: flex;
+  margin-left: -30px;
+  border: solid red;
+  border-width: 0 10px 10px 0;
+  border-radius: 5px;
+  padding: 10px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.up-arrow {
+  display: flex;
+  margin-left: -10px;
+  margin-bottom: -30px;
+  border: solid red;
+  border-width: 0 10px 10px 0;
+  border-radius: 5px;
+  padding: 10px;
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
 }
