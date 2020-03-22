@@ -23,7 +23,7 @@ button {
   margin: 5px;
 }
 
-.matrix-container {
+.main-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -40,6 +40,7 @@ button {
   border-color: #3282b8;
   border-width: 5px;
   border-style: ridge;
+  border-radius: 10px;
   flex-grow: 1;
   max-width: 45vw;
   overflow-y: auto;
