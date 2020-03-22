@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
@@ -11,66 +13,92 @@
 <body>
     <div class="full-window">
         <div class="menu-panel">
-            <a href="#">
+            <!-- <button id="save-all">
                 Save
-            </a>
-            <a href="#">
-                Load
-            </a>
-            <a href="#">
+            </button>   -->
+            <button id="save-all" class="button is-success">
+                <span class="icon is-small">
+                    <i class="fas fa-save"></i>
+                </span>
+                <span>Save</span>
+            </button>
+            <button id="delete">
                 Delete
-            </a>
+            </button>
+            <button id="download-data">
+                <span>
+                    <i class="fas fa-file-download"></i>
+                </span>
+                <span>Download</span>
+            </button>
         </div>
-        <div class="matrix-container">
-            <div class="row-container">
-                <div class="matrix-box">
-                    <h2 id="ImpNotUrg">
-                        Important, Not Urgent</h2>
-                        <div class="inputs">
 
-                        <input> </input>
-                        <input> </input>
-                        <input> </input>
-                        <input> </input>
-                        <input> </input>
-                        <input> </input>
-                        <input> </input>
-                        <input> </input>
-                        <input> </input>
-                        <input> </input>
-                        <input> </input>
-                        <input> </input>
-                        <input> </input>
-                        <input> </input>
-                        <input> </input>
-                        <input> </input>
-                        <input> </input>
-                        <input> </input>
-                        <input> </input>
-                        <input> </input>
+        <header>
+
+        </header>
+
+        <div class="matrix-container">
+            <div class="control">
+                <input id="title" class="input is-focused" type="text" placeholder="My Eisenhower Matrix">
+                </input>
+            </div>
+            <div>
+                <div class="row-container">
+                    <div class="matrix-box">
+                        <h2><span class="active">Important</span><span class="strikethrough">/Urgent</span></h2>
+                        <div id="A" class="inputs">
+                            <input> </input>
+                            <input> </input>
+                            <input> </input>
+                            <input> </input>
+                            <input> </input>
+                        </div>
+
                     </div>
 
+                    <div class="matrix-box">
+                        <h2><span class="active">Important/Urgent</span></h2>
+                        <div id="B" class="inputs">
+                            <input> </input>
+                            <input> </input>
+                            <input> </input>
+                            <input> </input>
+                            <input> </input>
+                        </div>
+
+                    </div>
                 </div>
+                <div class="row-container">
+                    <div class="matrix-box">
+                        <h2><span class="strikethrough">Important/Urgent</span></h2>
+                        <div id="C" class="inputs">
+                            <input> </input>
+                            <input> </input>
+                            <input> </input>
+                            <input> </input>
+                            <input> </input>
+                        </div>
 
-                <div class="matrix-box">
-                    <h2 id="ImpAndUrg">Important & Urgent</h2>
+                    </div>
 
-                </div>
-            </div>
-            <div class="row-container">
-                <div class="matrix-box">
-                    <h2>Not Important, Not Urgent</h2>
+                    <div class="matrix-box">
 
-                </div>
-
-                <div class="matrix-box">
-
-                    <h2>Not Important, Urgent</h2>
+                        <h2><span class="strikethrough">Important</span><span class="active">/Urgent</span></h2>
+                        <div id="D" class="inputs">
+                            <input> </input>
+                            <input> </input>
+                            <input> </input>
+                            <input> </input>
+                            <input> </input>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
 </body>
+
+<script src="script.js"></script>
 
 </html>
