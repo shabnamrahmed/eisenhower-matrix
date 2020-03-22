@@ -23,11 +23,12 @@ button {
   margin: 5px;
 }
 
-.matrix-container {
+.main-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 100%;
+  margin-right: 25px;
 }
 
 .row-container {
@@ -39,6 +40,7 @@ button {
   border-color: #3282b8;
   border-width: 5px;
   border-style: ridge;
+  border-radius: 10px;
   flex-grow: 1;
   max-width: 45vw;
   overflow-y: auto;
@@ -78,7 +80,7 @@ input {
 }
 
 h2 {
-  font-size: 300%;
+  font-size: 3.5vw;
   font-weight: bold;
   text-align: center;
   margin: 15px;
@@ -107,6 +109,15 @@ h2 {
   background-color: #f2e4cb;
 }
 
+#last-saved-text-container {
+  color: #bbe1faa6;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 15px;
+  max-width: 120px;
+}
+
 #download-data {
   background-color: #eac78d;
   /* background-color: #f6bd5f; */
@@ -118,13 +129,15 @@ h2 {
 
 /* graph lines */
 .horizontal-line-container {
+  margin-top: 10px;
   padding-left: 9.7em;
+  padding-right: 25px;
   display: flex;
   align-items: center;
 }
 
 .vertical-line-container {
-  margin-top: 50px;
+  justify-content: flex-end;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -133,23 +146,26 @@ h2 {
 }
 
 .vertical-line {
-  height: 40em;
-  border: solid red;
+  height: 36.5em;
+  width: 10px;
+  background: linear-gradient(#bbe1fa, #0f4c75);
   border-width: 0px 5px;
   border-radius: 28px;
+  margin-bottom: -15px;
 }
 
 .horizontal-line {
   width: 100%;
-  border: solid red;
   border-width: 10px 0px 0px 0px;
   border-radius: 20px;
+  background: linear-gradient(to right, #0f4c75, #bbe1fa);
+  height: 10px;
 }
 
 .right-arrow {
   display: flex;
   margin-left: -30px;
-  border: solid red;
+  border: solid #bbe1fa;
   border-width: 0 10px 10px 0;
   border-radius: 5px;
   padding: 10px;
@@ -161,10 +177,39 @@ h2 {
   display: flex;
   margin-left: -10px;
   margin-bottom: -30px;
-  border: solid red;
+  border: solid #bbe1fa;
   border-width: 0 10px 10px 0;
   border-radius: 5px;
   padding: 10px;
   transform: rotate(-135deg);
   -webkit-transform: rotate(-135deg);
+}
+
+/* GITHUB RIBBON */
+.github-corner:hover .octo-arm {
+  animation: octocat-wave 560ms ease-in-out;
+}
+
+@keyframes octocat-wave {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  20%,
+  60% {
+    transform: rotate(-25deg);
+  }
+  40%,
+  80% {
+    transform: rotate(10deg);
+  }
+}
+
+@media (max-width: 500px) {
+  .github-corner:hover .octo-arm {
+    animation: none;
+  }
+  .github-corner .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
+  }
 }
