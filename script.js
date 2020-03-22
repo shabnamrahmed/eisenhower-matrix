@@ -23,7 +23,8 @@ function updateSavedAtTime() {
 }
 
 // Converts text from each box to a string separated by a "|" symbol"
-// and prints each boxes contents on a single line
+// and adds a `\n` character so each boxes contents will print on a
+// new line when the file is ultimately written
 function getTextToSaveToFile() {
   return keys
     .map(key => {
