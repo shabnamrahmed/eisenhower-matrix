@@ -6,7 +6,7 @@ This is a single page application implementation of [The Eisenhower Matrix](http
 
 ## Motivation :bulb:
 
-Although there are many websites/apps out there to help you organize your tasks, many of them require creating an account or a payment.  This Eisenhower Matrix app requires neither and stores data directly in your browser allowing anyone to take adavantage of it immediately.  It was very helpful in organizing my projects and classowrk, and I hope others can benefit from it as well.
+Although there are many websites/apps out there to help you organize your tasks, many of them require creating an account or a payment.  This Eisenhower Matrix app requires neither and stores data directly in your browser allowing anyone to take advantage of it immediately.  It was very helpful in organizing my projects and classwork, and I hope others can benefit from it as well.
 
 ## Details :memo:
 
